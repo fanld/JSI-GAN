@@ -1,0 +1,1 @@
+python main.py --phase "test_mat" --scale_factor 2 --test_data_path_LR_SDR ./data/data/test/testset_SDR_x2.mat --test_data_path_HR_HDR ./data/data/test/testset_HDR.mat

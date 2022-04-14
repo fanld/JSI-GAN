@@ -30,15 +30,15 @@ def parse_args():
     parser.add_argument('--phase', type=str, default='train', choices=['train', 'test_mat', 'test_png'])
     parser.add_argument('--scale_factor', type=int, default=2, help='scale_factor for SR')
     # Set './data/train/SDR_youtube_80.mat' or './data/train/SDR_youtube_80_x4.mat' and './data/train/HDR_youtube_80.mat'
-    parser.add_argument('--train_data_path_LR_SDR', type=str, default='./data/train/SDR_youtube_80.mat', help='Train input data path')
-    parser.add_argument('--train_data_path_HR_HDR', type=str, default='./data/train/HDR_youtube_80.mat', help='Train GT data path')
+    parser.add_argument('--train_data_path_LR_SDR', type=str, default='./data/data/train/SDR_youtube_80.mat', help='Train input data path')
+    parser.add_argument('--train_data_path_HR_HDR', type=str, default='./data/data/train/HDR_youtube_80.mat', help='Train GT data path')
     # For .mat file test: set './data/test/testset_SDR_x2.mat' or './data/test/testset_SDR_x4.mat' and './data/test/testset_HDR.mat'
     # For .png file test: set './data/test/PNG/SDR_x2' or './data/test/PNG/SDR_x4' and './data/test/PNG/HDR'  ** or a directory of your choice
-    parser.add_argument('--test_data_path_LR_SDR', type=str, default='./data/test/testset_SDR_x2.mat', help='Test input data path')
-    parser.add_argument('--test_data_path_HR_HDR', type=str, default='./data/test/testset_HDR.mat', help='Test GT data path')
+    parser.add_argument('--test_data_path_LR_SDR', type=str, default='./data/data/test/testset_SDR_x2.mat', help='Test input data path')
+    parser.add_argument('--test_data_path_HR_HDR', type=str, default='./data/data/test/testset_HDR.mat', help='Test GT data path')
 
     """ Directories """
-    parser.add_argument('--checkpoint_dir', type=str, default='./checkpoint_dir', help='checkpoint_dir path')
+    parser.add_argument('--checkpoint_dir', type=str, default='./checkpoint_dir/checkpoint_dir', help='checkpoint_dir path')
     parser.add_argument('--log_dir', type=str, default='logs', help='Training logs for Tensorboard')
     parser.add_argument('--test_img_dir', type=str, default='./test_img_dir', help='test_img_dir path')
 
